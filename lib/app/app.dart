@@ -1,0 +1,118 @@
+import 'package:example/ui/views/bottom_nav_bar/bottom_nav_bar_viewmodel.dart';
+import 'package:example/ui/views/home/home_view.dart';
+import 'package:example/ui/views/startup/startup_view.dart';
+import 'package:example/ui/widgets/dialogs/info_alert/info_alert_dialog.dart';
+import 'package:example/ui/bottom_sheets/notice/notice_sheet.dart';
+import 'package:stacked/stacked_annotations.dart';
+import 'package:stacked_services/stacked_services.dart';
+import 'package:example/utils/preferences.dart';
+import 'package:example/ui/views/intro/intro_view.dart';
+import 'package:example/ui/views/login/login_view.dart';
+import 'package:example/ui/views/register/register_view.dart';
+import 'package:example/ui/views/otp/otp_view.dart';
+import 'package:example/ui/views/create_account/create_account_view.dart';
+import 'package:example/ui/views/congratulations/congratulations_view.dart';
+import 'package:example/ui/views/change_password/change_password_view.dart';
+import 'package:example/ui/views/forget_password/forget_password_view.dart';
+import 'package:example/ui/views/bottom_nav_bar/bottom_nav_bar_view.dart';
+import 'package:example/ui/views/profile/profile_view.dart';
+import 'package:example/ui/views/reservations/reservations_view.dart';
+import 'package:example/ui/views/chats/chats_view.dart';
+import 'package:example/ui/views/settings/settings_view.dart';
+import 'package:example/ui/views/contactus/contactus_view.dart';
+import 'package:example/ui/views/pages/pages_view.dart';
+import 'package:example/ui/views/notifications/notifications_view.dart';
+import 'package:example/ui/views/saved/saved_view.dart';
+import 'package:example/ui/views/reviews/reviews_view.dart';
+import 'package:example/ui/views/faq/faq_view.dart';
+import 'package:example/ui/views/edit_account/edit_account_view.dart';
+import 'package:example/ui/views/conversation/conversation_view.dart';
+import 'package:example/ui/bottom_sheets/media_picker/media_picker_sheet.dart';
+import 'package:example/ui/views/providers/providers_view.dart';
+import 'package:example/ui/views/provider_details/provider_details_view.dart';
+import 'package:example/ui/views/top_yachts/top_yachts_view.dart';
+import 'package:example/ui/views/details/details_view.dart';
+import 'package:example/ui/views/reservation_details/reservation_details_view.dart';
+import 'package:example/ui/views/book_yacht/book_yacht_view.dart';
+import 'package:example/ui/views/confirm_reservation/confirm_reservation_view.dart';
+import 'package:example/ui/views/map/map_view.dart';
+import 'package:example/ui/bottom_sheets/language/language_sheet.dart';
+import 'package:example/services/auth_service.dart';
+import 'package:example/services/common_service.dart';
+import 'package:example/services/rate_service.dart';
+import 'package:example/services/favourite_service.dart';
+import 'package:example/services/reservation_service.dart';
+import 'package:example/services/chat_service.dart';
+import 'package:example/ui/views/pay/pay_view.dart';
+import 'package:example/services/fcm_service.dart';
+import 'package:example/services/notification_service.dart';
+import 'package:example/ui/views/yachts/yachts_view.dart';
+// @stacked-import
+
+@StackedApp(
+  routes: [
+    MaterialRoute(page: HomeView),
+    MaterialRoute(page: StartupView),
+
+    MaterialRoute(page: IntroView),
+    MaterialRoute(page: LoginView),
+    MaterialRoute(page: RegisterView),
+    MaterialRoute(page: OtpView),
+    MaterialRoute(page: CreateAccountView),
+    MaterialRoute(page: CongratulationsView),
+    MaterialRoute(page: ChangePasswordView),
+    MaterialRoute(page: ForgetPasswordView),
+    MaterialRoute(page: BottomNavBarView),
+    MaterialRoute(page: ProfileView),
+    MaterialRoute(page: ReservationsView),
+    MaterialRoute(page: ChatsView),
+    MaterialRoute(page: SettingsView),
+    MaterialRoute(page: ContactusView),
+    MaterialRoute(page: PagesView),
+    MaterialRoute(page: NotificationsView),
+    MaterialRoute(page: SavedView),
+    MaterialRoute(page: ReviewsView),
+    MaterialRoute(page: FaqView),
+    MaterialRoute(page: EditAccountView),
+    MaterialRoute(page: ConversationView),
+    MaterialRoute(page: ProvidersView),
+    MaterialRoute(page: ProviderDetailsView),
+    MaterialRoute(page: TopYachtsView),
+    MaterialRoute(page: DetailsView),
+    MaterialRoute(page: ReservationDetailsView),
+    MaterialRoute(page: BookYachtView),
+    MaterialRoute(page: ConfirmReservationView),
+    MaterialRoute(page: MapView),
+    MaterialRoute(page: PayView),
+    MaterialRoute(page: YachtsView),
+// @stacked-route
+  ],
+  dependencies: [
+    LazySingleton(classType: BottomSheetService),
+    LazySingleton(classType: DialogService),
+    LazySingleton(classType: NavigationService),
+    LazySingleton(classType: PreferencesService),
+    LazySingleton(classType: AuthService),
+    LazySingleton(classType: CommonService),
+    LazySingleton(classType: RateService),
+    LazySingleton(classType: FavouriteService),
+    LazySingleton(classType: ReservationService),
+    LazySingleton(classType: ChatService),
+    LazySingleton(classType: SnackbarService),
+    LazySingleton(classType: BottomNavBarViewModel),
+    LazySingleton(classType: FcmService),
+    LazySingleton(classType: NotificationService),
+// @stacked-service
+  ],
+  bottomsheets: [
+    StackedBottomsheet(classType: NoticeSheet),
+    StackedBottomsheet(classType: MediaPickerSheet),
+    StackedBottomsheet(classType: LanguageSheet),
+// @stacked-bottom-sheet
+  ],
+  dialogs: [
+    StackedDialog(classType: InfoAlertDialog),
+    // @stacked-dialog
+  ],
+)
+class App {}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "5449573480",
+    "project_id": "unified-marine-provider",
+    "storage_bucket": "unified-marine-provider.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5449573480:android:76de0efad9cd3b05a647dd",
+        "android_client_info": {
+          "package_name": "com.wothoq.boatpro.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5YioPub2fPtY4-1FFtB7JQNF4ovwOI74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

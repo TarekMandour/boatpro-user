@@ -1,0 +1,139 @@
+name: example
+
+description: An app build with the stacked framework
+
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+4
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+  # For Architecture
+  stacked: ^3.4.1
+  stacked_services: ^1.0.0
+  # For Fonts
+  google_fonts: ^4.0.3
+  # For Splash Screen
+  flutter_native_splash: ^2.2.1
+
+  # For Translate
+  flutter_localizations:
+    sdk: flutter
+  flutter_translate: ^4.1.0
+
+  # For Storage
+  shared_preferences: ^2.0.15
+
+  # For Map & Location
+  google_maps_flutter: ^2.12.3
+  geocoding: ^2.1.0
+  geolocator: ^10.0.0
+
+  # For Caching
+  cached_network_image: ^3.2.1
+  flutter_cache_manager: ^3.3.0
+
+  # For Calendar & Time
+  syncfusion_flutter_datepicker: ^21.1.38
+  calendar_date_picker2: ^0.5.3
+  intl: ^0.19.0
+
+
+
+  # For Network
+  dio: ^5.1.2
+  dartz: ^0.10.1
+  pretty_dio_logger: ^1.3.1
+
+  # For Share
+  share_plus: ^7.0.1
+
+  # For UI
+  flutter_svg: ^2.0.4
+  flutter_animator: ^3.2.2
+  dots_indicator: ^2.1.0
+  loading_indicator: ^3.1.0
+  pin_code_fields: ^8.0.1
+  step_progress_indicator: ^1.0.2
+  carousel_slider: ^5.0.0
+  flutter_rating_stars: ^1.0.3+4
+  expandable: ^5.0.1
+  fl_country_code_picker: ^0.1.6+1
+  flutter_switch: ^0.3.2
+  circular_countdown_timer: ^0.2.3
+
+  # For MultiMedia picker
+  image_picker: ^1.1.2
+  flutter_image_compress: ^2.3.0
+  path_provider: ^2.0.15
+  video_compress: ^3.1.3
+  video_thumbnail: ^0.5.3
+  file_picker: ^8.1.7
+  win32: ^5.7.1
+
+  # For Toast
+  bot_toast: ^4.0.3
+
+  # For Device
+  device_info_plus: ^9.0.1
+  permission_handler: ^12.0.1
+  change_app_package_name: ^1.5.0
+
+  # For Web view
+  webview_flutter: ^4.4.1
+  html: ^0.15.4
+
+  # PUSH NOTIFICATION
+  firebase_messaging: ^15.1.3
+  flutter_local_notifications: ^17.2.4
+  firebase_core: ^3.6.0
+  awesome_dialog: ^3.0.2
+  url_launcher: ^6.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_gen_runner: ^5.3.1
+
+  flutter_lints: ^1.0.0
+  build_runner: ^2.4.6
+  injectable_generator: ^1.5.3
+  stacked_generator: ^1.3.3
+  mockito: ^5.3.2
+  image: ^4.0.17
+
+  # For Icon
+  flutter_launcher_icons: ^0.13.1
+
+dependency_overrides:
+  intl: ^0.20.2
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  android_disable_fullscreen: true
+  fill: true
+
+flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app_icon.png"
+  adaptive_icon_background: "assets/images/app_icon.png"
+
+flutter_gen:
+  integrations:
+    flutter_svg: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/svg/
+    - assets/i18n/
+    - assets/json/
