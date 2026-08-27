@@ -30,8 +30,8 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 35
-    ndkVersion = "26.1.10909125"
+    compileSdkVersion 36
+    ndkVersion = "27.0.12077973"
     namespace "com.wothoq.boatpro.user"
 
 
